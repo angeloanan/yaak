@@ -10,12 +10,14 @@ const NODE_VERSION = 'v22.9.0';
 const MAC_ARM = 'darwin_arm64';
 const MAC_X64 = 'darwin_x64';
 const LNX_X64 = 'linux_x64';
+const LNX_ARM = 'linux_arm64';
 const WIN_X64 = 'win32_x64';
 
 const URL_MAP = {
   [MAC_ARM]: `https://nodejs.org/download/release/${NODE_VERSION}/node-${NODE_VERSION}-darwin-arm64.tar.gz`,
   [MAC_X64]: `https://nodejs.org/download/release/${NODE_VERSION}/node-${NODE_VERSION}-darwin-x64.tar.gz`,
   [LNX_X64]: `https://nodejs.org/download/release/${NODE_VERSION}/node-${NODE_VERSION}-linux-x64.tar.gz`,
+  [LNX_ARM]: `https://nodejs.org/download/release/${NODE_VERSION}/node-${NODE_VERSION}-linux-arm64.tar.gz`,
   [WIN_X64]: `https://nodejs.org/download/release/${NODE_VERSION}/node-${NODE_VERSION}-win-x64.zip`,
 };
 
@@ -23,6 +25,7 @@ const SRC_BIN_MAP = {
   [MAC_ARM]: `node-${NODE_VERSION}-darwin-arm64/bin/node`,
   [MAC_X64]: `node-${NODE_VERSION}-darwin-x64/bin/node`,
   [LNX_X64]: `node-${NODE_VERSION}-linux-x64/bin/node`,
+  [LNX_ARM]: `node-${NODE_VERSION}-linux-arm64/bin/node`,
   [WIN_X64]: `node-${NODE_VERSION}-win-x64/node.exe`,
 };
 
@@ -30,6 +33,7 @@ const DST_BIN_MAP = {
   darwin_arm64: 'yaaknode-aarch64-apple-darwin',
   darwin_x64: 'yaaknode-x86_64-apple-darwin',
   linux_x64: 'yaaknode-x86_64-unknown-linux-gnu',
+  linux_arm64: 'yaaknode-aarch64-unknown-linux-gnu',
   win32_x64: 'yaaknode-x86_64-pc-windows-msvc.exe',
 };
 
